@@ -1,22 +1,9 @@
-let pathLib = "lib-loading-masia-v1.0/";
-
-function fetchJSONData() {
-    // Retourne une promesse qui résoudra les données JSON
-    return fetch(pathLib + 'config.json')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('La réponse n\'est pas OK');
-            }
-            return response.json();
-        })
-        .catch(error => {
-            console.error('Une erreur s\'est produite lors du chargement du fichier JSON :', error);
-        });
-}
+const linkElement = document.createElement('link');
+const loadingBackground = document.createElement('div');
+const loadingLogo = document.createElement('img');
 
 function createBackground() {
     // Créez votre élément
-    let loadingBackground = document.createElement('div');
     loadingBackground.id = 'loading-background';
 
     // Ajoutez à la page
@@ -26,7 +13,7 @@ function createBackground() {
 
 function createLogo(path, borderRadius, animation) {
     // Créez votre élément loadingLogo
-    let loadingLogo = document.createElement('img');
+
     loadingLogo.id = 'loading-logo';
 
     // Définissez la source de loadingLogo avec l'URL de l'icône du JSON
@@ -42,14 +29,14 @@ function createLogo(path, borderRadius, animation) {
         loadingLogo.classList.add('border-radius');
     }
 
-    loadingLogo.classList.add('animation-'+animation);
+    loadingLogo.classList.add('animation-' + animation);
 }
 
-function addCSS() {
+function addCSS(pathLib) {
     // Créez un élément <link> pour la feuille de style
-    let linkElement = document.createElement('link');
+
     linkElement.rel = 'stylesheet';
-    linkElement.href = pathLib+'style.css';
+    linkElement.href = pathLib + '/style.css';
 
     // Récupérez la balise <head>
     let head = document.head || document.getElementsByTagName('head')[0];
@@ -59,16 +46,28 @@ function addCSS() {
 }
 
 // La fonction mère du chargement
-fetchJSONData()
-    .then(data => {
-        let path = data.loading.icon.path;
-        let borderRadius = data.loading.icon.borderRadius;
-        let animation = data.loading.icon.animation;
-        
-        addCSS(pathLib);
+/**
+ * chargement de votre loader
+ * @param {*} config objet de configuration devant contenir icon.path, icon.borderRadius, icon.animation et pathLib
+ */
+function createLoading(config) {
+    const path = (config && config.icon && config.icon.path) ? config.icon.path : "https://masia-antoine.fr/profil/resources/images/logo.png";
+    const borderRadius = (config && config.icon && config.icon.borderRadius) ? config.icon.borderRadius : false;
+    const animation = (config && config.icon && config.icon.animation) ? config.icon.animation : "rotate";
+    const pathLib = (config && config.pathLib) ? config.pathLib : "/lib-loading-masia-v1.0"
 
-        createLogo(path, borderRadius, animation);
+    addCSS(pathLib);
 
-        createBackground();
-    }
-);
+    createLogo(path, borderRadius, animation);
+
+    createBackground();
+}
+
+/**
+ * Stop de votre loader
+ */
+function stopLoading() {
+    linkElement.remove()
+    loadingBackground.remove()
+    loadingLogo.remove()
+}

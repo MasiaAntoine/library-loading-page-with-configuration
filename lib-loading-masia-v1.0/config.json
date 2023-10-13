@@ -1,9 +1,0 @@
-{
-    "loading": {
-        "icon": {
-            "path": "https://masia-antoine.fr/profil/resources/images/logo.png",
-            "borderRadius": true,
-            "animation": "rotate"
-        }
-    }
-}
