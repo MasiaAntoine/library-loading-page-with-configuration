@@ -2,7 +2,6 @@ Version: 1.1
 Library Name: loading-masia
 Author: Masia Antoine
 
-
 | EN |
 You need to configure the default script in the index.html
 You only need to import the app.js file.
