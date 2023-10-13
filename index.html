@@ -4,10 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Library Loading Masia - v1.1</title>
 
-    <script src="lib-loading-masia-v1.0/app.js"></script>
-    <script src="./index.js" defer></script>
+    <!-- Import the library -->
+    <script src="lib-loading-masia-v1.1/app.js"></script>
+
+    <!-- Your config to modify according to your needs -->
+    <script>
+        window.addEventListener('load', () => {
+
+            createLoading({
+                icon: {
+                    path: "https://jdedev.fr/images/logo-jdedev.png",
+                    borderRadius: false,
+                    animation: "rotateLeftAndRight"
+                },
+                pathLib: "/lib-loading-masia-v1.1"
+            })
+
+            setTimeout(() => {
+                stopLoading()
+            }, 5000)
+        })
+    </script>
     
 </head>
 
