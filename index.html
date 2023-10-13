@@ -11,21 +11,23 @@
 
     <!-- Your config to modify according to your needs -->
     <script>
-        window.addEventListener('load', () => {
-
+        // It is important to leave the Timeout set in relation to loading the library script.
+        setTimeout(() => {
             createLoading({
                 icon: {
-                    path: "https://jdedev.fr/images/logo-jdedev.png",
-                    borderRadius: false,
-                    animation: "rotateLeftAndRight"
+                    path: "https://www.masia-antoine.fr/profil/resources/images/logo.png",
+                    borderRadius: true,
+                    animation: "transparent"
                 },
                 pathLib: "/lib-loading-masia-v1.1"
             })
+        });
 
-            setTimeout(() => {
-                stopLoading()
-            }, 5000)
-        })
+        // Remember to activate the lines here to clear the loading page when your page is loaded.
+        
+        //window.addEventListener('load', () => {
+        //    stopLoading()
+        //});
     </script>
     
 </head>

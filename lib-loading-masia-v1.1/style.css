@@ -56,6 +56,22 @@
         }
     }
     
+    #loading-logo.animation-babal {
+        animation: babal 6s infinite;
+    }
+    @keyframes babal {
+        0%, 100% {
+            transform: translateX(-50%) translateY(-50%) scaleY(0.8);
+          }
+          10%, 30%, 50%, 70%, 90% {
+            transform: translateX(-50%) translateY(-110%);
+          }
+          20%, 40%, 60%, 80% {
+            transform: translateX(-50%) translateY(-50%) scaleY(0.8);
+          }
+        }
+
+
     #loading-logo.animation-rotate {
         animation: rotate 1s infinite linear;
     }
@@ -65,5 +81,20 @@
         }
         100% {
             transform: translate(-50%, -50%) rotate(360deg);
+        }
+    }
+
+    #loading-logo.animation-transparent {
+        animation: transparent 3.5s infinite linear;
+    }
+    @keyframes transparent {
+        0% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0.2;
+        }
+        100% {
+            opacity: 1;
         }
     }
