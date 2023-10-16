@@ -4,10 +4,9 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="example" />
         <title>example</title>
-        <link rel="shortcut icon" href="images/Logo.png" />
-        <script src="./loader-lib/index.js"></script>
+        <!-- <link rel="shortcut icon" href="images/Logo.png" /> -->
+        <script src="loader-lib/app.js"></script>
     </head>
     <body>
         <script>
@@ -20,19 +19,19 @@
             loader.resetBodyMargin(true);
 
             //! Loader container
-            loader.setContainerBackgroundImage("./img.jpg");
+            loader.setContainerBackgroundImage("loader-lib/images/background-default.jpg");
             // loader.setContainerBackgroundColor("blue");
             loader.setContainerBackgroundBlur("15px");
 
             //! Loader
             loader.setLoaderSize("350px", "350px");
             loader.setRadius("50%");
-            loader.setLoaderBackgroundImage("./robot.png");
-            // loader.setLoaderBackgroundColor("#333");
-            // loader.setLoaderBorderWidth("5px");
-            // loader.setLoaderBorderColor("purple");
-            // loader.setLoaderBorderStyle("dashed");
-            loader.setLoaderAnimations([["ZoomInOut", "2"]]);
+            loader.setLoaderBackgroundImage("loader-lib/images/logo-default.png");
+            loader.setLoaderBackgroundColor("#333");
+            loader.setLoaderBorderWidth("5px");
+            loader.setLoaderBorderColor("purple");
+            loader.setLoaderBorderStyle("dashed");
+            loader.setLoaderAnimations([["transparent", "30"]]);
         </script>
     </body>
 </html>

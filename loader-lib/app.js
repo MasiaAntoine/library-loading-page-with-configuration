@@ -14,7 +14,7 @@ class Loader {
         const linkElement = document.createElement("link");
         linkElement.rel = "stylesheet";
         linkElement.type = "text/css";
-        linkElement.href = "./loader-lib/loader.css";
+        linkElement.href = "./loader-lib/style.css";
         document.head.appendChild(linkElement);
     }
 
