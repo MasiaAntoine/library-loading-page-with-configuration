@@ -11,23 +11,20 @@
 
     <!-- Your config to modify according to your needs -->
     <script>
-        const loadingScreen = new LoadingScreen();
-
         // It is important to leave the Timeout set in relation to loading the library script.
         setTimeout(() => {
-            loadingScreen.createLoading({
-                icon: {
-                    path: "https://www.masia-antoine.fr/profil/resources/images/logo.png",
-                    borderRadius: true,
-                    animation: "zoomZoomOut"
-                },
-                pathLib: "/lib-loading-masia-v1.1"
-            });
+            const loader = new LoadingScreen();
+    
+            loader.createLoading("lib-loading-masia-v1.1");
+            loader.createLogo("https://www.masia-antoine.fr/profil/resources/images/logo.png");
+
+            loader.setAnimationLogo("zoomZoomOut");
+            loader.setBorderRadiusLogo(true);
         });
         
         // Remember to activate the lines here to clear the loading page when your page is loaded.
         //window.addEventListener('load', () => {
-        //    loadingScreen.stopLoading();
+        //    loader.stopLoading();
         //});
     </script>
     

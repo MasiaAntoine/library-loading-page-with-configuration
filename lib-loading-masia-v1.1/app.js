@@ -10,17 +10,21 @@ class LoadingScreen {
         let body = document.body;
         body.insertBefore(this.loadingBackground, body.firstChild);
     }
-
-    _createLogo(path, borderRadius, animation) {
+    
+    createLogo(path) {
         this.loadingLogo.id = 'loading-logo';
         this.loadingLogo.src = path;
         let body = document.body;
         body.insertBefore(this.loadingLogo, body.firstChild);
+    }
 
+    setBorderRadiusLogo(borderRadius) {
         if (borderRadius === true) {
             this.loadingLogo.classList.add('border-radius');
         }
+    }
 
+    setAnimationLogo(animation) {
         this.loadingLogo.classList.add('animation-' + animation);
     }
 
@@ -31,14 +35,8 @@ class LoadingScreen {
         head.appendChild(this.linkElement);
     }
 
-    createLoading(config) {
-        const path = (config && config.icon && config.icon.path) ? config.icon.path : "https://masia-antoine.fr/profil/resources/images/logo.png";
-        const borderRadius = (config && config.icon && config.icon.borderRadius) ? config.icon.borderRadius : false;
-        const animation = (config && config.icon && config.icon.animation) ? config.icon.animation : "rotate";
-        const pathLib = (config && config.pathLib) ? config.pathLib : "/lib-loading-masia-v1.0";
-
+    createLoading(pathLib) {
         this._addCSS(pathLib);
-        this._createLogo(path, borderRadius, animation);
         this._createBackground();
     }
 
