@@ -1,152 +1,38 @@
 <!DOCTYPE html>
 <html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="example" />
+        <title>example</title>
+        <link rel="shortcut icon" href="images/Logo.png" />
+        <script src="./loader-lib/index.js"></script>
+    </head>
+    <body>
+        <script>
+            //! Position du loader
+            //! position des images de fond
+            //! Animation colors ? genre pulse
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library Loading Masia - v1.1</title>
+            let loader = new Loader();
+            //! Page
+            loader.resetBodyMargin(true);
 
-    <!-- Import the library -->
-    <script src="lib-loading-masia-v1.1/app.js"></script>
+            //! Loader container
+            loader.setContainerBackgroundImage("./img.jpg");
+            // loader.setContainerBackgroundColor("blue");
+            loader.setContainerBackgroundBlur("15px");
 
-    <!-- Your config to modify according to your needs -->
-    <script>
-        // It is important to leave the Timeout set in relation to loading the library script.
-        setTimeout(() => {
-            createLoading({
-                icon: {
-                    path: "https://www.masia-antoine.fr/profil/resources/images/logo.png",
-                    borderRadius: true,
-                    animation: "transparent"
-                },
-                pathLib: "/lib-loading-masia-v1.1"
-            })
-        });
-
-        // Remember to activate the lines here to clear the loading page when your page is loaded.
-        
-        //window.addEventListener('load', () => {
-        //    stopLoading()
-        //});
-    </script>
-    
-</head>
-
-<body>
-    <div>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam fugiat, in exercitationem enim provident quaerat
-        blanditiis impedit labore, dolor rem, itaque quas? Officiis dolorem voluptatibus vitae dolorum similique id
-        ratione.<br><br>
-        Assumenda nihil eaque numquam in eum doloribus nam. Iure illo reprehenderit in natus quisquam ducimus
-        perferendis sit eos aspernatur assumenda, facilis fugiat veniam iste ipsam dolorem tempore, accusantium
-        quibusdam pariatur?<br><br>
-        Deserunt laborum, minus consequuntur eaque quisquam nemo dicta fugiat placeat! Quod inventore quasi similique
-        vel nam cupiditate in, facilis iure at modi magni animi accusamus reprehenderit nostrum sapiente cum
-        fugiat.<br><br>
-        Amet inventore adipisci distinctio labore quia quasi unde mollitia laboriosam. Fugit obcaecati odit itaque
-        magnam iure, facilis expedita odio maiores sit velit dolorum inventore saepe provident, quibusdam vero incidunt
-        facere?<br><br>
-        Exercitationem repellendus illo voluptates ratione odio nobis, similique earum distinctio obcaecati quas
-        inventore in sapiente tenetur beatae magnam rem laborum dolore blanditiis, corporis vero repellat reiciendis!
-        Enim id ratione asperiores.<br><br>
-        Nihil architecto sequi quas, dolores impedit ratione itaque. Mollitia eaque voluptatum, sit tempora ipsa dolores
-        provident sunt facere id delectus officia molestiae exercitationem accusantium ex vitae, laborum voluptatem,
-        veniam nesciunt.<br><br>
-        Ab nam rem, quisquam possimus odit pariatur placeat rerum ullam esse sint nihil, ad maiores assumenda aliquam
-        deleniti vero ex iusto neque fugit maxime. Tenetur porro facere esse iusto dolorem?<br><br>
-        Similique, sunt pariatur, incidunt asperiores ad assumenda necessitatibus mollitia voluptas qui nesciunt modi?
-        Amet delectus rerum veniam animi fuga. Sit nihil commodi numquam neque minima inventore quam et quasi
-        dolores?<br><br>
-        Voluptas eos modi eius dolore commodi explicabo nesciunt sapiente, voluptatem quod et quisquam. Praesentium
-        sequi sit in facere reiciendis itaque illo perspiciatis est molestias velit. Facilis eius quisquam quod
-        modi.<br><br>
-        Tenetur at excepturi labore error optio quos quisquam, ex blanditiis nihil accusamus sapiente fugiat similique
-        aliquam nemo ratione veritatis eum expedita, beatae aut debitis! Fugit necessitatibus excepturi earum. Fugiat,
-        ad.<br><br>
-        Laborum, quidem amet sapiente omnis, assumenda qui quod molestias dolorem enim, placeat nam unde facere
-        perferendis temporibus. Nesciunt fuga autem dolores sapiente. Itaque quidem delectus voluptate labore corrupti
-        in asperiores.<br><br>
-        Optio ipsa harum blanditiis soluta facere vero unde distinctio perferendis eaque provident quisquam saepe alias
-        possimus molestias cupiditate, dignissimos iste nam? Veritatis consequatur ex quas deleniti, qui minima mollitia
-        rem!<br><br>
-        Magni incidunt doloremque quod corporis molestias nam libero aperiam velit sed laboriosam! Maiores dolorem
-        fugiat blanditiis aperiam eaque tempore modi sequi repellendus consectetur cum quo, voluptatem mollitia officia
-        at doloribus?<br><br>
-        Perferendis deleniti, corporis, amet similique accusantium id veritatis at repellat, quas dolorem ratione nam
-        nemo odit voluptatum nostrum incidunt culpa vero! Omnis debitis laudantium id similique itaque maiores error
-        quia.<br><br>
-        Quas est ex quasi dicta a, quo fuga dolor dolorem quia, quae perspiciatis quod mollitia? Ut omnis id quae, minus
-        tempora et similique iure rem quia accusamus, illum nisi veritatis?<br><br>
-        Suscipit aliquam quia tempore, tempora possimus quas reiciendis explicabo esse praesentium ratione corrupti
-        architecto in iure sed rerum libero, consequuntur cupiditate officiis aut ad itaque eaque ut! Fugit, temporibus
-        earum?<br><br>
-        Corrupti, tempora eius quo ad veritatis vero voluptates dolorem ratione incidunt assumenda inventore debitis
-        quas adipisci tenetur quae. Itaque commodi sed perferendis dignissimos, alias beatae voluptatem saepe tempora
-        magni. Repellat!<br><br>
-        Error quaerat voluptate reprehenderit dolor doloribus culpa eaque, odit quas laborum, aut dicta possimus
-        perspiciatis aliquid consequuntur praesentium repellat veniam vero fugiat maxime adipisci. Non optio quo dolore
-        perspiciatis molestiae!<br><br>
-        Minus veniam quas nihil consectetur fugiat, in voluptate quia officiis molestiae aliquid impedit provident eum
-        modi perspiciatis soluta repudiandae repellat animi voluptatem vero doloremque? Est ratione fuga aperiam atque
-        eligendi.<br><br>
-        Maxime incidunt perspiciatis dignissimos. Odit quidem at consequuntur eveniet maiores dolore id molestiae quae
-        tempora minima, distinctio culpa rem rerum illum voluptatum eaque laborum repellat quasi cupiditate sequi
-        facilis quam.<br><br>
-        Repellat ullam ut tempore distinctio sapiente, similique corrupti? Accusamus ex quos quae, ratione maiores
-        molestiae nostrum. Perferendis alias quidem pariatur omnis quae impedit sequi, necessitatibus eaque laboriosam
-        aliquam, enim sed?<br><br>
-        Excepturi, aliquid? Labore, magnam. Ut eum pariatur esse ratione excepturi unde atque eos quia at vel tempora
-        cupiditate rem labore amet quam, placeat harum? Ducimus, hic. Magnam molestias corrupti dolor.<br><br>
-        Nam eius adipisci consectetur facilis rem, ipsa nostrum harum explicabo quibusdam saepe maxime aperiam quisquam
-        minus delectus corrupti iure quasi quis ex vel alias iste? Sequi pariatur id ea vitae!<br><br>
-        Quae eligendi eveniet, voluptates voluptate architecto quo hic odit, sed debitis distinctio, ratione minima?
-        Maiores laudantium consequuntur deleniti ipsa iusto magni dolorem molestiae quibusdam molestias deserunt.
-        Maiores totam cumque veritatis!<br><br>
-        Aliquid perspiciatis, ad assumenda delectus, amet quam consequuntur eum nemo, porro repellendus alias facilis
-        quod voluptas quo saepe. Dolorum ab quam perspiciatis nemo voluptates cumque nesciunt ex porro, exercitationem
-        quaerat!<br><br>
-        Consequatur maiores eveniet tempore? Tempora omnis quibusdam dolore voluptatibus sint eveniet ut rem, nesciunt
-        nisi ex fugiat nam nobis repellendus, maxime doloremque laboriosam natus quo distinctio qui animi a
-        totam?<br><br>
-        Nostrum magni laboriosam iusto corporis, perspiciatis impedit quibusdam ab, dolorum reprehenderit commodi,
-        quidem sed harum quam atque iste? Asperiores sit enim quisquam provident odio quasi cumque nemo error incidunt
-        voluptatum.<br><br>
-        Et magni aut, sint eveniet accusamus eius magnam similique libero modi ex sunt officia reprehenderit aperiam
-        labore nisi, minima culpa optio fugit excepturi a! Eius eaque adipisci sapiente eum! At.<br><br>
-        Omnis aperiam rem iusto non, assumenda facilis. Corrupti voluptas alias provident quae. Et, unde excepturi.
-        Culpa, aliquid! Quos optio quis est sint, ipsa aspernatur dolorum dolorem harum, sed quo aliquid!<br><br>
-        Placeat aspernatur aliquid repudiandae repellat! Saepe quia debitis minima fugiat, possimus optio odit atque
-        ullam repudiandae neque consectetur amet totam voluptate at ducimus aut veritatis obcaecati beatae est officia.
-        Odit.<br><br>
-        Error et ut veniam dolore ullam cum voluptatum nulla. Nihil, aspernatur. Praesentium illum voluptate maiores
-        sint debitis quidem, minus, dolores veniam nobis qui ducimus neque beatae impedit eum natus quibusdam.<br><br>
-        Aut amet, porro dolor at quibusdam dicta delectus id. Ullam aspernatur, quisquam doloremque error temporibus
-        facilis voluptates laboriosam mollitia quibusdam corporis sequi hic, illum, totam ex. Animi assumenda autem
-        aspernatur?<br><br>
-        Cupiditate porro temporibus ipsam. Ad veniam quia porro eligendi! Unde minus nostrum quos dolore sint in
-        eligendi magni quidem ipsa corrupti iusto cupiditate est, obcaecati non corporis pariatur voluptas
-        exercitationem!<br><br>
-        Necessitatibus aspernatur quia aut, harum sint vero earum beatae? Id totam temporibus vitae quam suscipit
-        laudantium vero iure et dignissimos, voluptas sit, beatae, delectus reprehenderit natus quas. Rerum, odit
-        aperiam.<br><br>
-        Ut labore praesentium eum commodi beatae amet quod in blanditiis, necessitatibus tempora corrupti velit sequi a
-        itaque vero excepturi nisi? Quasi rem magnam hic perferendis dolor ut officia nostrum omnis.<br><br>
-        Quibusdam ducimus repudiandae architecto placeat porro dolorum nam obcaecati quis sequi, error ad iure? Laborum
-        molestias consequuntur tempora velit, reprehenderit, earum nobis, distinctio quo molestiae animi esse eaque
-        laboriosam adipisci!<br><br>
-        Tempore minima obcaecati culpa, alias architecto provident saepe amet repellendus dolorum magnam totam rerum
-        perferendis dignissimos consequatur quia exercitationem veniam accusantium ratione sit maxime. Sunt consequatur
-        beatae labore consequuntur tempore.<br><br>
-        Voluptates at ut ipsum ipsa nulla in inventore. Atque, culpa? Provident, numquam impedit. Accusamus vel nobis
-        temporibus delectus, tempore maiores perferendis veniam aspernatur cum suscipit ducimus odit nostrum voluptatum
-        doloribus?<br><br>
-        Recusandae impedit perspiciatis, delectus aut omnis veritatis minus necessitatibus! Vero sit sed exercitationem
-        aut voluptatem unde asperiores at rem maiores maxime laboriosam suscipit fuga quidem reiciendis, hic deserunt
-        qui praesentium?<br><br>
-        Ullam perspiciatis quisquam totam iusto at fugiat amet similique sit, unde, perferendis quis architecto? Vel
-        ipsa maxime praesentium, in, rerum temporibus debitis omnis ducimus ullam voluptates aut, delectus ea
-        odio.<br><br>
-    </div>
-</body>
-
+            //! Loader
+            loader.setLoaderSize("350px", "350px");
+            loader.setRadius("50%");
+            loader.setLoaderBackgroundImage("./robot.png");
+            // loader.setLoaderBackgroundColor("#333");
+            // loader.setLoaderBorderWidth("5px");
+            // loader.setLoaderBorderColor("purple");
+            // loader.setLoaderBorderStyle("dashed");
+            loader.setLoaderAnimations([["ZoomInOut", "2"]]);
+        </script>
+    </body>
 </html>

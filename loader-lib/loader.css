@@ -1,0 +1,119 @@
+body.resetBodyMargin {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.loaderContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.loaderBackground {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+}
+
+.loader {
+    width: 500px;
+    height: 500px;
+    background-color: black;
+    z-index: 1;
+    border: 2px solid white;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: rotateLeftRight 1s, ZoomInOut 3s linear infinite;
+}
+
+.loader.animation-ZoomInOut {
+    animation: ZoomInOut 2s infinite;
+}
+@keyframes ZoomInOut {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.1);}
+    100% {transform: scale(1);}
+}
+
+.loader.animation-rotateLeftRight {
+    animation: rotateLeftRight 2s infinite;
+}
+@keyframes rotateLeftRight {
+    0% {transform: rotate(0deg);}
+    50% {transform: rotate(360deg);}
+    100% {transform: rotate(0deg);}
+}
+
+.loader.animation-rotateLeft {
+    animation: rotateLeft 1s infinite linear;
+}
+@keyframes rotateLeft {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(-360deg);}
+}
+
+.loader.animation-rotateRight {
+    animation: rotateRight 1s infinite linear;
+}
+@keyframes rotateRight {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+.loader.animation-pulse {
+    box-shadow: 0 0 0 0 rgba(0, 75, 75, 0.7);
+    animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+@keyframes pulse {
+    100% {box-shadow: 0 0 0 65px rgba(56, 0, 0, 0);}
+}
+
+.loader.animation-horizontal-shaking {
+    animation: horizontal-shaking 1s infinite linear;
+}
+@keyframes horizontal-shaking {
+    0% { transform: translateX(0) }
+    25% { transform: translateX(5px) }
+    50% { transform: translateX(-5px) }
+    75% { transform: translateX(5px) }
+    100% { transform: translateX(0) }
+}
+
+.loader.animation-vertical-shaking {
+    animation: vertical-shaking 1s infinite linear;
+}
+@keyframes vertical-shaking {
+    0% { transform: translateY(0) }
+    25% { transform: translateY(5px) }
+    50% { transform: translateY(-5px) }
+    75% { transform: translateY(5px) }
+    100% { transform: translateY(0) }
+}
+
+.loader.animation-tilt-shaking {
+    animation: tilt-shaking 1s infinite linear;
+}
+@keyframes tilt-shaking {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+.loader.animation-tilt-n-move-shaking {
+    animation: tilt-n-move-shaking 1s infinite linear;
+}
+@keyframes tilt-n-move-shaking {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(5px, 5px) rotate(5deg); }
+    50% { transform: translate(0, 0) rotate(0eg); }
+    75% { transform: translate(-5px, 5px) rotate(-5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
